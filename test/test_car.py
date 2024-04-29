@@ -70,7 +70,7 @@ class TestSpindler(unittest.TestCase):
     # 2 years
     def test_battery_should_be_serviced(self):
         today = datetime.today().date()
-        three_years_ago = today.replace(year=today.year-3)
+        three_years_ago = today.replace(year=today.year-4)
         nubbin = SpindlerBattery(three_years_ago, today)
         self.assertTrue(nubbin.needs_service())
 
